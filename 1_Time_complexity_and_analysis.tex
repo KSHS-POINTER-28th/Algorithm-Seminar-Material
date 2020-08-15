@@ -109,7 +109,7 @@
         물론, 시간 복잡도가 다항 함수가 아닐 수도 있다. 예를 들어서 \href{https://www.acmicpc.net/problem/1065}{BOJ 1065 - 한수}를 보자. 필자가 작성한 정답 코드는 다음과 같다.
         \lstinputlisting[label=code3,caption={BOJ 1065 - 한수를 푸는 코드, 브루트 포스 (Bruteforce)기법을 사용하였다.}]{BOJ1065.cpp}
         \ref{code3}의 18-26번째 줄에서는 while 루프를 도는데 조건이 특이하다. 바로 특정한 값 $i$를 계속 10으로 나누고 0이 될때까지 반복한다는 의미인데, 결국 끝날때 까지의 반복 횟수는 약 $\log{i}$이다. 즉, 시간 복잡도에 $\log{i}$가 들어간다는 말이다.
-        이제 나눗셈 연산 기준으로 분석해보자. 우선 비트수는 한정되어있으니 나눗셈 연산은 상수 시간 (constant time)으로 가정해도 문제는 없을 것이고, $T(n) = \log{1} + ... \log{n} = \log{n!}$이다. 여기에서 Stirling's approximation \cite{stirling}을 적용시키면, $\log{n!} = O(\log{n^{n}) = O(n\log{n})$이다. 따라서 시간 복잡도는 $O(n\log{n})$이다.
+        이제 나눗셈 연산 기준으로 분석해보자. 우선 비트수는 한정되어있으니 나눗셈 연산은 상수 시간 (constant time)으로 가정해도 문제는 없을 것이고, $T(n) = \log{1} + ... \log{n} = \log{n!}$이다. 여기에서 Stirling's approximation \cite{stirling}을 적용시키면, $\log{n!} = O(\log{n^{n}}) = O(n\log{n})$이다. 따라서 시간 복잡도는 $O(n\log{n})$이다.
     \bibliographystyle{IEEEtranS}
     \bibliography{1_Time_complexity_and_analysis}
 \end{document}
